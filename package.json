@@ -1,0 +1,23 @@
+{
+  "name": "cypress-datatestapplication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leonard-Boante-Mensah/Cypress-dataTestApplication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leonard-Boante-Mensah/Cypress-dataTestApplication/issues"
+  },
+  "homepage": "https://github.com/Leonard-Boante-Mensah/Cypress-dataTestApplication#readme",
+  "dependencies": {
+    "cypress": "^9.5.2"
+  }
+}
