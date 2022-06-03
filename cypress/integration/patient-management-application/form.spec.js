@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 describe('patient-management-application', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
