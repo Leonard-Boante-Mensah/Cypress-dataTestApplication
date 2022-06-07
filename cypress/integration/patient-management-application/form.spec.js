@@ -1,57 +1,42 @@
 /// <reference types="cypress" />
 describe('patient-management-application', () => {
     beforeEach(() => {
-      cy.visit('http://localhost:3000/')
+      cy.visit('/')
     })
     it ("inputs form values, submits forms and displays card", () => {
-        // Check first name can be exists and can be typed
-        cy.get("[data-test-id='first-name']")
+        cy.get("[data-cy='firstname-field']")
             .type("Charles")
             .should("have.value", "Charles");
 
-        // Check middle exists and can be typed
-        cy.get("[data-test-id='middle-name']")
+        cy.get("[data-cy='middle-name-field']")
             .type("Kofi")
             .should("have.value", "Kofi");
         
-        // Check last name exits and can be typed 
-        cy.get("[data-test-id='last-name']")
+        cy.get("[data-cy='lastname-field']")
             .type("Nuamah")
             .should("have.value", "Nuamah");
 
-        // Check phone number exists and can be typed
-        cy.get("[data-test-id='phone-number']")
+        cy.get("[data-cy='phone-number-field']")
             .type("0207654661")
             .should("have.value", "0207654661");
         
-        // Check date of birth input exists and can be typed 
-        cy.get("[data-test-id='dob']").click()
+        cy.get("[data-cy='date-of-birth-field']").click()
             .type('1998-07-23')
             .should("have.value", "1998-07-23");
         
-        // Check address field exists and can be typed
-        cy.get("[data-test-id='address']")
+        cy.get("[data-cy='address-input-field']")
             .type('AS-985-7867')
             .should("have.value", "AS-985-7867");
         
-        // Check submit button exists and can be clicked
-        cy.get("[data-test-id='submit-btn']").click()
+        cy.get("[data-cy='submit-button']").click()
 
-
-        // Check a card appears after submission and 
-        // Check the display of full name on card
-        cy.get('.sc-htoDjs > :nth-child(1)')
+        cy.get("[data-test-id='all-user-cards']")
             .should("be.visible")
             .should("contain", "Charles Kofi Nuamah")
-
-        // Check the display of address on card
-        cy.get('.sc-htoDjs > :nth-child(2)')
-            .should("be.visible")
             .should("contain", "ADDRESS: AS-985-7867")
-        
-        // Check the display of date of birth on card
-        cy.get('.sc-htoDjs > :nth-child(3)')
-            .should("be.visible")
             .should("contain", "DOB: 23rd July 1998")
+
     })
 })
+
+//data-cy
