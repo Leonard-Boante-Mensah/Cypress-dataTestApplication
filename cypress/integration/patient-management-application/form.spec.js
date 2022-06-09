@@ -35,7 +35,6 @@ describe('patient-management-application', () => {
             .should("contain", "Charles Kofi Nuamah")
             .should("contain", "ADDRESS: AS-985-7867")
             .should("contain", "DOB: 23rd July 1998")
-
     })
 })
 
